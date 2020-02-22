@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { withFormik, Form, Field } from "formik";
 import axios from 'axios'
+import CharacterCard from './CharacterCard'
 
 const SearchForm = ({ values }) => {
 
-  const [query, setQuery] = useState('')
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -36,12 +36,7 @@ const SearchForm = ({ values }) => {
        </label>
      </Form>
      <div className="character-list">
-      {data.map(item => (
-        <div>
-        <h2>{item.name}</h2>
-        <img src={item.image} />
-        </div>
-      ))}
+      <CharacterCard data={data} />
       </div>
     </section>
   );
@@ -52,27 +47,5 @@ export default withFormik({
   mapPropsToValues: props => ({
     name: "",
    })
-  // handleSubmit: (values, { resetForm, setStatus }) => {
-  //   // console.log("Submitting!", formikBag)
-  //   // POST body === {}
-  //   axios
-  //     .post("https://reqres.in/api/users/", values)
-  //     .then(response => {
-  //       setStatus(response.data);
-  //       alert("Your information was submitted");
-  //       resetForm();
-  //     })
-  //     .catch(err => console.log(err.response));
-  // },
-  // validationSchema: yup.object().shape({
-  //   name: yup
-  //     .string()
-  //     .required("Required!"),
-  //   email: yup
-  //   .string()
-  //   .email('Add a valid email'),
-  //   password: yup
-  //   .string()
-  //   .min(8)
-  // }),
+ 
 })(SearchForm);
