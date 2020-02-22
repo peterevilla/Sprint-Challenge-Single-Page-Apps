@@ -37,3 +37,24 @@ main {
 header h1 {
   text-align: center;
 }
+
+
+.character-list {
+
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10%;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+
+  text-decoration: none;
+  color: black;
+}
