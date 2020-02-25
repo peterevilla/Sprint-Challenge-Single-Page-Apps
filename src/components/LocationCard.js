@@ -9,6 +9,7 @@ export default function LocationCard({ data }) {
   <CardBody>
   <p>Type:{data.type}</p>
   <p>{data.dimension}</p>
+  <p>{data.residents}</p>
   </CardBody>
 </Card>
 

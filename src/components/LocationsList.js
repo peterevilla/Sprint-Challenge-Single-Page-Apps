@@ -38,10 +38,10 @@ const LocationsList = () => {
     <h2>Search a Location</h2>
       <SearchForm handle={handle} data={data}  />
     </div>
-     <div className="character-list">
+     <div className="location-list">
     
     {data.map(item => (
-     <LocationCard data={item} />
+     <LocationCard className='list' data={item} />
     ))}
     </div>
   </section>

@@ -95,3 +95,12 @@ nav {
   color: black;
 
 }
+
+
+.location-list {
+
+  display: flex;
+  flex-direction: column;
+ 
+
+}
